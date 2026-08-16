@@ -230,41 +230,30 @@ ____________________
           </div>
         </section>
 
-        {/* National & State Helpline Hub (Editorial Inline Layout) */}
-        <section className="helpline-section-hub" style={{ marginTop: '2rem', borderTop: 'none', paddingTop: '0' }}>
-          <h3 className="section-title-hub" style={{ textAlign: 'left', marginBottom: '0.5rem' }}>
-            {lang === 'en' ? "Emergency Directory" : "आपातकालीन निर्देशिका"}
-          </h3>
-          <p className="section-subtitle-hub" style={{ textAlign: 'left', margin: '0 0 1.5rem 0', maxWidth: '100%' }}>
-            {lang === 'en' 
-              ? "Instant assistance channels provided by government and municipal authorities."
-              : "सरकारी और नगर निगम अधिकारियों द्वारा प्रदान किए गए त्वरित सहायता चैनल।"}
-          </p>
-          <div className="helpline-inline-list" style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginBottom: '2.5rem' }}>
-            <a href="tel:112" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'var(--danger-bg-light)', color: 'var(--danger-color)', padding: '0.65rem 1.25rem', borderRadius: '50px', textDecoration: 'none', fontWeight: 700, border: '1px solid rgba(225, 29, 72, 0.15)', fontSize: '0.85rem' }}>
-              📞 {lang === 'en' ? "National Emergency:" : "राष्ट्रीय आपातकाल:"} 112
-            </a>
-            <a href="tel:181" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'var(--accent-bg-light)', color: 'var(--accent-color)', padding: '0.65rem 1.25rem', borderRadius: '50px', textDecoration: 'none', fontWeight: 700, border: '1px solid rgba(37, 99, 235, 0.15)', fontSize: '0.85rem' }}>
-              🏛️ {lang === 'en' ? "CM Helpline:" : "मुख्यमंत्री हेल्पलाइन:"} 181 / 1076
-            </a>
-            <a href="tel:1930" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'var(--accent-bg-light)', color: 'var(--accent-color)', padding: '0.65rem 1.25rem', borderRadius: '50px', textDecoration: 'none', fontWeight: 700, border: '1px solid rgba(37, 99, 235, 0.15)', fontSize: '0.85rem' }}>
-              🛡️ {lang === 'en' ? "Cyber Crime:" : "साइबर अपराध:"} 1930
-            </a>
-            <a href="tel:1091" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'var(--danger-bg-light)', color: 'var(--danger-color)', padding: '0.65rem 1.25rem', borderRadius: '50px', textDecoration: 'none', fontWeight: 700, border: '1px solid rgba(225, 29, 72, 0.15)', fontSize: '0.85rem' }}>
-              👩 {lang === 'en' ? "Women Safety:" : "महिला सुरक्षा:"} 1091
-            </a>
+        {/* Emergency Helpline Bar */}
+        <div className="helpline-bar">
+          <div className="helpline-bar-inner">
+            <span className="helpline-bar-label">
+              {lang === 'en' ? "Emergency Helplines:" : "आपातकालीन हेल्पलाइन:"}
+            </span>
+            <div className="helpline-pills">
+              <a href="tel:112" className="helpline-pill pill-danger">📞 112 — {lang === 'en' ? "Emergency" : "आपातकालीन"}</a>
+              <a href="tel:181" className="helpline-pill pill-accent">🏛️ 181 — {lang === 'en' ? "CM Helpline" : "CM हेल्पलाइन"}</a>
+              <a href="tel:1930" className="helpline-pill pill-accent">🛡️ 1930 — {lang === 'en' ? "Cyber Crime" : "साइबर अपराध"}</a>
+              <a href="tel:1091" className="helpline-pill pill-danger">👩 1091 — {lang === 'en' ? "Women Safety" : "महिला सुरक्षा"}</a>
+            </div>
           </div>
-        </section>
+        </div>
 
         {/* Citizen Legal Flowchart */}
         <section className="legal-flowchart-section">
           <h3 className="section-title-hub">
-            {lang === 'en' ? "Citizen Action Protocol Flowchart" : "नागरिक कानूनी कार्रवाई प्रवाह चार्ट"}
+            {lang === 'en' ? "Citizen Action Protocol" : "नागरिक कानूनी कार्रवाई प्रोटोकॉल"}
           </h3>
           <p className="section-subtitle-hub">
             {lang === 'en' 
-              ? "Follow these crucial steps sequentially when facing police interaction or filing a complaint."
-              : "पुलिस बातचीत का सामना करते समय या शिकायत दर्ज करते समय अनुक्रम में इन महत्वपूर्ण चरणों का पालन करें।"}
+              ? "Follow these steps sequentially when facing a police interaction."
+              : "पुलिस बातचीत का सामना करते समय इन चरणों का क्रमानुसार पालन करें।"}
           </p>
           <div className="flowchart-container">
             <div className="flow-step">
@@ -289,7 +278,7 @@ ____________________
             <div className="flow-connector">➔</div>
             <div className="flow-step">
               <div className="flow-step-num">3</div>
-              <div className="flow-step-title">{lang === 'en' ? "Arrest/Detention" : "गिरफ्तारी / हिरासत"}</div>
+              <div className="flow-step-title">{lang === 'en' ? "Arrest / Detention" : "गिरफ्तारी / हिरासत"}</div>
               <p className="flow-step-desc">
                 {lang === 'en' 
                   ? "Ask for the grounds. Demand an arrest memo. Relatives must be informed immediately."
@@ -311,8 +300,6 @@ ____________________
 
         {/* Anchored Section for Rights Exploration */}
         <div id="explore-rights" style={{ scrollMarginTop: '120px' }}></div>
-
-
 
         {/* Modern Search Filter */}
         <SearchBox 
@@ -352,62 +339,54 @@ ____________________
           ))}
         </div>
 
-        {/* Good Practices & Verification Section (Editorial Paragraph Layout) */}
-        <section className="good-practices-section" style={{ marginTop: '5rem', borderTop: '1px solid var(--border-color)', paddingTop: '4rem' }}>
-          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-            <h3 className="section-title-hub" style={{ textAlign: 'left', marginBottom: '1.5rem' }}>
-              {lang === 'en' ? "Essential Guidelines for Citizen Encounters" : "नागरिकों के लिए आवश्यक दिशा-निर्देश"}
+        {/* Essential Guidelines — Editorial Paragraph Layout */}
+        <section className="editorial-section">
+          <div className="editorial-inner">
+            <h3 className="section-title-hub" style={{ textAlign: 'left', marginBottom: '0.75rem' }}>
+              {lang === 'en' ? "Essential Guidelines" : "आवश्यक दिशा-निर्देश"}
             </h3>
-            
-            <div className="editorial-practices-list" style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-              <div className="editorial-item" style={{ borderLeft: '3px solid var(--accent-color)', paddingLeft: '1.5rem' }}>
-                <h4 style={{ fontSize: '1.1rem', fontWeight: 800, marginBottom: '0.5rem', color: 'var(--text-primary)' }}>
-                  🧘 {lang === 'en' ? "Maintain Calm Demeanor & Defuse Tension" : "शांत व्यवहार बनाए रखें और तनाव कम करें"}
-                </h4>
-                <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.7' }}>
+            <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '2.5rem' }}>
+              {lang === 'en'
+                ? "Practical advice recommended by legal experts for any police interaction scenario."
+                : "किसी भी पुलिस बातचीत परिदृश्य के लिए कानूनी विशेषज्ञों द्वारा अनुशंसित व्यावहारिक सलाह।"}
+            </p>
+
+            <div className="editorial-list">
+              <div className="editorial-item">
+                <h4>🧘 {lang === 'en' ? "Stay Calm & Composed" : "शांत और संयमित रहें"}</h4>
+                <p>
                   {lang === 'en' 
-                    ? "In any police interaction, your composure is your strongest asset. Avoid physical resistance, sudden aggressive gestures, or verbal arguments. State your answers firmly but politely. Cooperating with lawful identification queries prevents unnecessary escalations."
-                    : "पुलिस से किसी भी बातचीत में आपका संयम आपकी सबसे बड़ी संपत्ति है। शारीरिक विरोध, अचानक आक्रामक व्यवहार या मौखिक बहस से बचें। अपनी बात दृढ़ता से लेकिन विनम्रता से कहें। वैध पहचान संबंधी प्रश्नों में सहयोग करने से अनावश्यक तनाव से बचा जा सकता है।"}
+                    ? "Your composure is your strongest asset. Avoid physical resistance, sudden aggressive gestures, or verbal arguments. State your answers firmly but politely. Cooperating with lawful identification queries prevents unnecessary escalation."
+                    : "आपका संयम आपकी सबसे बड़ी संपत्ति है। शारीरिक विरोध, अचानक आक्रामक व्यवहार या मौखिक बहस से बचें। अपनी बात दृढ़ता से लेकिन विनम्रता से कहें। वैध पहचान संबंधी प्रश्नों में सहयोग अनावश्यक तनाव से बचाता है।"}
                 </p>
               </div>
-
-              <div className="editorial-item" style={{ borderLeft: '3px solid var(--accent-color)', paddingLeft: '1.5rem' }}>
-                <h4 style={{ fontSize: '1.1rem', fontWeight: 800, marginBottom: '0.5rem', color: 'var(--text-primary)' }}>
-                  📝 {lang === 'en' ? "Systematic Record Keeping & Documentation" : "व्यवस्थित रिकॉर्ड रखना और दस्तावेजीकरण"}
-                </h4>
-                <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.7' }}>
+              <div className="editorial-item">
+                <h4>📝 {lang === 'en' ? "Document Everything" : "सब कुछ दस्तावेज में दर्ज करें"}</h4>
+                <p>
                   {lang === 'en'
-                    ? "Always document key details as soon as possible. Note down the time, precise location, name tags, ranks of the officers involved, and vehicle license numbers. If there are any witnesses nearby, note their names and contact information. These details are critical if you choose to file a grievance later."
-                    : "हमेशा जल्द से जल्द महत्वपूर्ण विवरणों को दस्तावेज के रूप में दर्ज करें। समय, सटीक स्थान, शामिल अधिकारियों के नाम टैग, पद और वाहन लाइसेंस नंबर नोट करें। यदि आस-पास कोई गवाह हो, तो उनके नाम और संपर्क जानकारी नोट करें। बाद में शिकायत दर्ज करने के लिए ये विवरण अत्यंत महत्वपूर्ण हैं।"}
+                    ? "Note down the time, location, badge numbers, ranks of officers involved, and vehicle plates. If witnesses are present, record their names and contact details. These records are critical for filing a grievance later."
+                    : "समय, स्थान, बैज नंबर, शामिल अधिकारियों के पद और वाहन नंबर नोट करें। यदि गवाह मौजूद हों, तो उनके नाम और संपर्क विवरण दर्ज करें। बाद में शिकायत दर्ज करने के लिए ये रिकॉर्ड अत्यंत महत्वपूर्ण हैं।"}
                 </p>
               </div>
-
-              <div className="editorial-item" style={{ borderLeft: '3px solid var(--accent-color)', paddingLeft: '1.5rem' }}>
-                <h4 style={{ fontSize: '1.1rem', fontWeight: 800, marginBottom: '0.5rem', color: 'var(--text-primary)' }}>
-                  🔍 {lang === 'en' ? "Verify & Read Thoroughly Before Signing" : "हस्ताक्षर करने से पहले अच्छी तरह से पढ़ें और सत्यापित करें"}
-                </h4>
-                <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.7' }}>
+              <div className="editorial-item">
+                <h4>🔍 {lang === 'en' ? "Read Before You Sign" : "हस्ताक्षर से पहले पढ़ें"}</h4>
+                <p>
                   {lang === 'en'
-                    ? "Never sign blank papers, pre-written sheets, or confessions under duress. You have a legal right to read and verify every statement recorded. If a document contains inaccurate information, politely refuse to sign it and request corrections. Always demand copies of official memos, such as arrest or seizure memos."
-                    : "दबाव में कभी भी खाली कागजात, पहले से लिखे गए पत्रों या इकबालिया बयानों पर हस्ताक्षर न करें। आपके पास दर्ज किए गए प्रत्येक बयान को पढ़ने और सत्यापित करने का कानूनी अधिकार है। यदि किसी दस्तावेज में गलत जानकारी है, तो विनम्रता से हस्ताक्षर करने से मना करें और सुधार का अनुरोध करें। हमेशा गिरफ्तारी या जब्ती जैसे आधिकारिक मेमो की प्रतियों की मांग करें।"}
+                    ? "Never sign blank papers, pre-written sheets, or confessions under duress. You have a legal right to read every statement recorded. If a document contains errors, refuse to sign and request corrections. Always demand copies of arrest or seizure memos."
+                    : "दबाव में कभी खाली कागजात, पहले से लिखे पत्रों या इकबालिया बयानों पर हस्ताक्षर न करें। दर्ज किए गए प्रत्येक बयान को पढ़ने का आपका कानूनी अधिकार है। गलत दस्तावेज पर हस्ताक्षर से मना करें। गिरफ्तारी या जब्ती मेमो की प्रति हमेशा मांगें।"}
                 </p>
               </div>
-
-              <div className="editorial-item" style={{ borderLeft: '3px solid var(--accent-color)', paddingLeft: '1.5rem' }}>
-                <h4 style={{ fontSize: '1.1rem', fontWeight: 800, marginBottom: '0.5rem', color: 'var(--text-primary)' }}>
-                  ⚖️ {lang === 'en' ? "Lawfully Preserve Physical & Digital Evidence" : "शारीरिक और डिजिटल साक्ष्यों को कानूनी रूप से सुरक्षित रखें"}
-                </h4>
-                <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.7' }}>
+              <div className="editorial-item">
+                <h4>⚖️ {lang === 'en' ? "Preserve All Evidence" : "सभी साक्ष्य सुरक्षित रखें"}</h4>
+                <p>
                   {lang === 'en'
-                    ? "If your rights are compromised or physical force is used, visit a government hospital immediately to get an official Medical Examination Report. Safely preserve any photos, audio recordings, or videos of the incident. Ensure these are kept securely as they serve as crucial evidence before courts or police complaints authorities."
-                    : "यदि आपके अधिकारों का उल्लंघन होता है या शारीरिक बल का उपयोग किया जाता है, तो आधिकारिक चिकित्सा परीक्षण रिपोर्ट (MLC) प्राप्त करने के लिए तुरंत सरकारी अस्पताल जाएं। घटना के किसी भी फोटो, ऑडियो रिकॉर्डिंग या वीडियो को सुरक्षित रखें। इन्हें संभाल कर रखें क्योंकि ये अदालतों या पुलिस शिकायत अधिकारियों के सामने महत्वपूर्ण सबूत के रूप में काम करते हैं।"}
+                    ? "If physical force is used, visit a government hospital immediately for an official Medical Examination Report (MLC). Preserve photos, audio, or video recordings of the incident securely — they serve as crucial evidence before courts and police complaints authorities."
+                    : "यदि शारीरिक बल का उपयोग हो, तो आधिकारिक चिकित्सा परीक्षण रिपोर्ट (MLC) के लिए तुरंत सरकारी अस्पताल जाएं। घटना के फोटो, ऑडियो या वीडियो रिकॉर्डिंग सुरक्षित रखें — ये अदालतों और पुलिस शिकायत अधिकारियों के सामने महत्वपूर्ण सबूत हैं।"}
                 </p>
               </div>
             </div>
           </div>
         </section>
-
-
 
         {/* Frequently Asked Questions */}
         <FaqSection t={t} lang={lang} />
