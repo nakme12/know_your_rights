@@ -10,6 +10,7 @@ import SOSModal from '../components/SOSModal';
 import FIRLetterModal from '../components/FIRLetterModal';
 import SituationCard from '../components/SituationCard';
 import FaqSection from '../components/FaqSection';
+import FloatingWidgets from '../components/FloatingWidgets';
 
 export default function Home() {
   const [lang, setLang] = useState('en');
@@ -230,20 +231,7 @@ ____________________
           </div>
         </section>
 
-        {/* Emergency Helpline Bar */}
-        <div className="helpline-bar">
-          <div className="helpline-bar-inner">
-            <span className="helpline-bar-label">
-              {lang === 'en' ? "Emergency Helplines:" : "आपातकालीन हेल्पलाइन:"}
-            </span>
-            <div className="helpline-pills">
-              <a href="tel:112" className="helpline-pill pill-danger">📞 112 — {lang === 'en' ? "Emergency" : "आपातकालीन"}</a>
-              <a href="tel:181" className="helpline-pill pill-accent">🏛️ 181 — {lang === 'en' ? "CM Helpline" : "CM हेल्पलाइन"}</a>
-              <a href="tel:1930" className="helpline-pill pill-accent">🛡️ 1930 — {lang === 'en' ? "Cyber Crime" : "साइबर अपराध"}</a>
-              <a href="tel:1091" className="helpline-pill pill-danger">👩 1091 — {lang === 'en' ? "Women Safety" : "महिला सुरक्षा"}</a>
-            </div>
-          </div>
-        </div>
+
 
         {/* Citizen Legal Flowchart */}
         <section className="legal-flowchart-section">
@@ -477,11 +465,14 @@ ____________________
               &copy; 2026 Citizen Shield. Designed for Independence Day Citizen Welfare Initiative.
             </p>
             <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '0.25rem', fontWeight: 700 }}>
-              Made with ❤️ by Pratik | Sponsored by Let's Code | जय हिन्द 🇮🇳
+              Made with ❤️ by Pratik | Sponsored by Let's Code
             </p>
           </div>
         </div>
       </footer>
+
+      {/* Floating Helpline & Chat Widgets */}
+      <FloatingWidgets lang={lang} />
     </>
   );
 }
