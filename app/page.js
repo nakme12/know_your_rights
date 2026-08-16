@@ -165,8 +165,9 @@ ____________________
               ? "BNSS 2023 Rules: Police are now legally bound to register FIR (Zero FIR) anywhere in India."
               : "BNSS 2023 नियम: पुलिस अब पूरे भारत में कहीं भी एफआईआर (जीरो एफआईआर) दर्ज करने के लिए कानूनी रूप से बाध्य है।"}
           </span>
-          <span className="topbar-emergency">
-            🚨 {lang === 'en' ? "Emergency: 112" : "आपातकालीन: 112"}
+          <span className="topbar-emergency" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem', color: '#f43f5e' }}>
+            <Icons.PhoneCall />
+            <span>{lang === 'en' ? "Emergency: 112" : "आपातकालीन: 112"}</span>
           </span>
         </div>
       </div>
