@@ -372,52 +372,57 @@ ____________________
           ))}
         </div>
 
-        {/* Good Practices & Verification Section */}
+        {/* Good Practices & Verification Section (Editorial Paragraph Layout) */}
         <section className="good-practices-section" style={{ marginTop: '5rem', borderTop: '1px solid var(--border-color)', paddingTop: '4rem' }}>
-          <h3 className="section-title-hub">
-            {lang === 'en' ? "Good Practices for Citizens" : "नागरिकों के लिए सर्वोत्तम प्रथाएं"}
-          </h3>
-          <p className="section-subtitle-hub">
-            {lang === 'en' 
-              ? "Recommended guidelines to keep in mind during any police interaction."
-              : "पुलिस से बातचीत के दौरान ध्यान रखने योग्य अनुशंसित दिशा-निर्देश।"}
-          </p>
-          <div className="helpline-hub-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.25rem' }}>
-            <div className="hub-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-              <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>🧘</div>
-              <h4 style={{ fontSize: '0.95rem', fontWeight: 800, marginBottom: '0.25rem' }}>
-                {lang === 'en' ? "Stay Calm & Polite" : "शांत और विनम्र रहें"}
-              </h4>
-              <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>
-                {lang === 'en' ? "Avoid physical resistance or verbal argument. State your points firmly." : "शारीरिक विरोध या बहस से बचें। अपनी बात दृढ़ता से कहें।"}
-              </p>
-            </div>
-            <div className="hub-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-              <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>📝</div>
-              <h4 style={{ fontSize: '0.95rem', fontWeight: 800, marginBottom: '0.25rem' }}>
-                {lang === 'en' ? "Keep Records" : "विवरण रिकॉर्ड रखें"}
-              </h4>
-              <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>
-                {lang === 'en' ? "Note dates, times, badge numbers, names of officers and witnesses." : "तारीखें, समय, बैज नंबर, अधिकारियों और गवाहों के नाम नोट करें।"}
-              </p>
-            </div>
-            <div className="hub-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-              <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>🔍</div>
-              <h4 style={{ fontSize: '0.95rem', fontWeight: 800, marginBottom: '0.25rem' }}>
-                {lang === 'en' ? "Read Before Signing" : "हस्ताक्षर से पहले पढ़ें"}
-              </h4>
-              <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>
-                {lang === 'en' ? "Never sign blank papers or confessions you do not agree with." : "सहमत न होने पर कभी भी खाली कागजात या बयानों पर हस्ताक्षर न करें।"}
-              </p>
-            </div>
-            <div className="hub-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-              <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>⚖️</div>
-              <h4 style={{ fontSize: '0.95rem', fontWeight: 800, marginBottom: '0.25rem' }}>
-                {lang === 'en' ? "Preserve Evidence" : "साक्ष्य सुरक्षित रखें"}
-              </h4>
-              <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>
-                {lang === 'en' ? "Retain photos, videos, medical slips, or documents lawfully." : "तस्वीरें, वीडियो, मेडिकल पर्चियां या दस्तावेज कानूनी रूप से सुरक्षित रखें।"}
-              </p>
+          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+            <h3 className="section-title-hub" style={{ textAlign: 'left', marginBottom: '1.5rem' }}>
+              {lang === 'en' ? "Essential Guidelines for Citizen Encounters" : "नागरिकों के लिए आवश्यक दिशा-निर्देश"}
+            </h3>
+            
+            <div className="editorial-practices-list" style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+              <div className="editorial-item" style={{ borderLeft: '3px solid var(--accent-color)', paddingLeft: '1.5rem' }}>
+                <h4 style={{ fontSize: '1.1rem', fontWeight: 800, marginBottom: '0.5rem', color: 'var(--text-primary)' }}>
+                  🧘 {lang === 'en' ? "Maintain Calm Demeanor & Defuse Tension" : "शांत व्यवहार बनाए रखें और तनाव कम करें"}
+                </h4>
+                <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.7' }}>
+                  {lang === 'en' 
+                    ? "In any police interaction, your composure is your strongest asset. Avoid physical resistance, sudden aggressive gestures, or verbal arguments. State your answers firmly but politely. Cooperating with lawful identification queries prevents unnecessary escalations."
+                    : "पुलिस से किसी भी बातचीत में आपका संयम आपकी सबसे बड़ी संपत्ति है। शारीरिक विरोध, अचानक आक्रामक व्यवहार या मौखिक बहस से बचें। अपनी बात दृढ़ता से लेकिन विनम्रता से कहें। वैध पहचान संबंधी प्रश्नों में सहयोग करने से अनावश्यक तनाव से बचा जा सकता है।"}
+                </p>
+              </div>
+
+              <div className="editorial-item" style={{ borderLeft: '3px solid var(--accent-color)', paddingLeft: '1.5rem' }}>
+                <h4 style={{ fontSize: '1.1rem', fontWeight: 800, marginBottom: '0.5rem', color: 'var(--text-primary)' }}>
+                  📝 {lang === 'en' ? "Systematic Record Keeping & Documentation" : "व्यवस्थित रिकॉर्ड रखना और दस्तावेजीकरण"}
+                </h4>
+                <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.7' }}>
+                  {lang === 'en'
+                    ? "Always document key details as soon as possible. Note down the time, precise location, name tags, ranks of the officers involved, and vehicle license numbers. If there are any witnesses nearby, note their names and contact information. These details are critical if you choose to file a grievance later."
+                    : "हमेशा जल्द से जल्द महत्वपूर्ण विवरणों को दस्तावेज के रूप में दर्ज करें। समय, सटीक स्थान, शामिल अधिकारियों के नाम टैग, पद और वाहन लाइसेंस नंबर नोट करें। यदि आस-पास कोई गवाह हो, तो उनके नाम और संपर्क जानकारी नोट करें। बाद में शिकायत दर्ज करने के लिए ये विवरण अत्यंत महत्वपूर्ण हैं।"}
+                </p>
+              </div>
+
+              <div className="editorial-item" style={{ borderLeft: '3px solid var(--accent-color)', paddingLeft: '1.5rem' }}>
+                <h4 style={{ fontSize: '1.1rem', fontWeight: 800, marginBottom: '0.5rem', color: 'var(--text-primary)' }}>
+                  🔍 {lang === 'en' ? "Verify & Read Thoroughly Before Signing" : "हस्ताक्षर करने से पहले अच्छी तरह से पढ़ें और सत्यापित करें"}
+                </h4>
+                <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.7' }}>
+                  {lang === 'en'
+                    ? "Never sign blank papers, pre-written sheets, or confessions under duress. You have a legal right to read and verify every statement recorded. If a document contains inaccurate information, politely refuse to sign it and request corrections. Always demand copies of official memos, such as arrest or seizure memos."
+                    : "दबाव में कभी भी खाली कागजात, पहले से लिखे गए पत्रों या इकबालिया बयानों पर हस्ताक्षर न करें। आपके पास दर्ज किए गए प्रत्येक बयान को पढ़ने और सत्यापित करने का कानूनी अधिकार है। यदि किसी दस्तावेज में गलत जानकारी है, तो विनम्रता से हस्ताक्षर करने से मना करें और सुधार का अनुरोध करें। हमेशा गिरफ्तारी या जब्ती जैसे आधिकारिक मेमो की प्रतियों की मांग करें।"}
+                </p>
+              </div>
+
+              <div className="editorial-item" style={{ borderLeft: '3px solid var(--accent-color)', paddingLeft: '1.5rem' }}>
+                <h4 style={{ fontSize: '1.1rem', fontWeight: 800, marginBottom: '0.5rem', color: 'var(--text-primary)' }}>
+                  ⚖️ {lang === 'en' ? "Lawfully Preserve Physical & Digital Evidence" : "शारीरिक और डिजिटल साक्ष्यों को कानूनी रूप से सुरक्षित रखें"}
+                </h4>
+                <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.7' }}>
+                  {lang === 'en'
+                    ? "If your rights are compromised or physical force is used, visit a government hospital immediately to get an official Medical Examination Report. Safely preserve any photos, audio recordings, or videos of the incident. Ensure these are kept securely as they serve as crucial evidence before courts or police complaints authorities."
+                    : "यदि आपके अधिकारों का उल्लंघन होता है या शारीरिक बल का उपयोग किया जाता है, तो आधिकारिक चिकित्सा परीक्षण रिपोर्ट (MLC) प्राप्त करने के लिए तुरंत सरकारी अस्पताल जाएं। घटना के किसी भी फोटो, ऑडियो रिकॉर्डिंग या वीडियो को सुरक्षित रखें। इन्हें संभाल कर रखें क्योंकि ये अदालतों या पुलिस शिकायत अधिकारियों के सामने महत्वपूर्ण सबूत के रूप में काम करते हैं।"}
+                </p>
+              </div>
             </div>
           </div>
         </section>
