@@ -644,7 +644,7 @@ body {
 }
 
 .modal-content {
-  background-color: var(--bg-card);
+  background-color: #ffffff;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   width: 100%;
@@ -653,12 +653,13 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  box-shadow: var(--shadow-lg), inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  box-shadow: var(--shadow-lg);
   animation: modalIn var(--transition-normal) forwards;
 }
 
 .dark .modal-content {
-  box-shadow: var(--shadow-lg), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+  background-color: #141417;
+  box-shadow: var(--shadow-lg);
 }
 
 @keyframes modalIn {
