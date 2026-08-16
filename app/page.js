@@ -156,12 +156,30 @@ ____________________
       {/* Top Brand Line */}
       <div style={{ height: '4px', background: 'var(--accent-color)', width: '100%' }}></div>
 
+      {/* Sleek Announcement Topbar */}
+      <div className="announcement-topbar">
+        <div className="topbar-inner">
+          <span className="badge-live">LIVE</span>
+          <span className="topbar-text">
+            {lang === 'en' 
+              ? "BNSS 2023 Rules: Police are now legally bound to register FIR (Zero FIR) anywhere in India."
+              : "BNSS 2023 नियम: पुलिस अब पूरे भारत में कहीं भी एफआईआर (जीरो एफआईआर) दर्ज करने के लिए कानूनी रूप से बाध्य है।"}
+          </span>
+          <span className="topbar-emergency">
+            🚨 {lang === 'en' ? "Emergency: 112" : "आपातकालीन: 112"}
+          </span>
+        </div>
+      </div>
+
       {/* Main Header */}
       <header className="main-header">
         <div className="header-inner">
-          <div className="brand">
-            <h1>Adhikar</h1>
-            <p>Bilingual Guide to Indian Police Rights (BNSS & BNS)</p>
+          <div className="brand" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            <img src="/logo.jpg" alt="Citizen Shield Logo" style={{ width: '40px', height: '40px', borderRadius: '8px', border: '1px solid var(--border-color)' }} />
+            <div>
+              <h1 style={{ lineHeight: '1.2' }}>Citizen Shield</h1>
+              <p style={{ marginTop: '0' }}>Bilingual Guide to Indian Police Rights (BNSS & BNS)</p>
+            </div>
           </div>
           <div className="controls">
             <button className="btn icon-btn" onClick={() => setIsDarkMode(!isDarkMode)} aria-label="Toggle Theme">
@@ -176,6 +194,143 @@ ____________________
       </header>
 
       <main className="app-container">
+        {/* Landing Page Hero Section */}
+        <section className="hero-section">
+          <div className="hero-badge">{t.hero_badge}</div>
+          <h2 className="hero-title">{t.hero_title}</h2>
+          <p className="hero-subtitle">{t.hero_subtitle}</p>
+          <div className="hero-ctas">
+            <button className="btn btn-danger btn-large pulse-btn" onClick={() => setIsSosOpen(true)}>
+              <Icons.ShieldAlert />
+              <span>{t.cta_sos}</span>
+            </button>
+            <button className="btn btn-accent btn-large" onClick={() => setIsFirOpen(true)}>
+              <Icons.FileWarning />
+              <span>{t.cta_fir}</span>
+            </button>
+            <a href="#explore-rights" className="btn btn-secondary btn-large">
+              <Icons.Search />
+              <span>{t.cta_rights}</span>
+            </a>
+          </div>
+          <div className="hero-stats">
+            <div className="stat-item">
+              <span className="stat-icon">⚡</span>
+              <span className="stat-text">{t.stat_rules}</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-icon">⚖️</span>
+              <span className="stat-text">{t.stat_bnss}</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-icon">📝</span>
+              <span className="stat-text">{t.stat_complaint}</span>
+            </div>
+          </div>
+        </section>
+
+        {/* National & State Helpline Hub (Moved to Top for Crisis Access) */}
+        <section className="helpline-section-hub" style={{ marginTop: '2rem', borderTop: 'none', paddingTop: '0' }}>
+          <h3 className="section-title-hub">
+            {lang === 'en' ? "National & State Helpline Directory" : "राष्ट्रीय एवं राज्य हेल्पलाइन निर्देशिका"}
+          </h3>
+          <p className="section-subtitle-hub" style={{ marginBottom: '2rem' }}>
+            {lang === 'en' 
+              ? "Instant assistance channels provided by government and municipal authorities for emergency grievance registration."
+              : "आपातकालीन शिकायत पंजीकरण के लिए सरकारी और नगर निगम अधिकारियों द्वारा प्रदान किए गए त्वरित सहायता चैनल।"}
+          </p>
+          <div className="helpline-hub-grid">
+            <div className="hub-card">
+              <div className="hub-card-icon">📞</div>
+              <div className="hub-card-content">
+                <h4>{lang === 'en' ? "National Emergency Service" : "राष्ट्रीय आपातकालीन सेवा"}</h4>
+                <p>{lang === 'en' ? "Immediate police, fire, or medical dispatch" : "तत्काल पुलिस, अग्नि या चिकित्सा सेवा"}</p>
+                <a href="tel:112" className="hub-call-btn">112</a>
+              </div>
+            </div>
+            <div className="hub-card">
+              <div className="hub-card-icon">🏛️</div>
+              <div className="hub-card-content">
+                <h4>{lang === 'en' ? "CM Helpline Desk" : "मुख्यमंत्री (CM) हेल्पलाइन"}</h4>
+                <p>{lang === 'en' ? "State government public grievance redressal cell" : "राज्य सरकार जन शिकायत निवारण प्रकोष्ठ"}</p>
+                <a href="tel:181" className="hub-call-btn">181 / 1076</a>
+              </div>
+            </div>
+            <div className="hub-card">
+              <div className="hub-card-icon">🛡️</div>
+              <div className="hub-card-content">
+                <h4>{lang === 'en' ? "Cyber Crime Helpdesk" : "साइबर अपराध हेल्पडेस्क"}</h4>
+                <p>{lang === 'en' ? "Report online fraud, identity theft, & scams" : "ऑनलाइन धोखाधड़ी, पहचान चोरी और घोटालों की रिपोर्ट करें"}</p>
+                <a href="tel:1930" className="hub-call-btn">1930</a>
+              </div>
+            </div>
+            <div className="hub-card">
+              <div className="hub-card-icon">👩</div>
+              <div className="hub-card-content">
+                <h4>{lang === 'en' ? "Women Safety Helpline" : "महिला सुरक्षा हेल्पलाइन"}</h4>
+                <p>{lang === 'en' ? "24/7 dedicated support & local squad alert" : "24/7 समर्पित सहायता और स्थानीय पुलिस दस्ता अलर्ट"}</p>
+                <a href="tel:1091" className="hub-call-btn">1091</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Citizen Legal Flowchart */}
+        <section className="legal-flowchart-section">
+          <h3 className="section-title-hub">
+            {lang === 'en' ? "Citizen Action Protocol Flowchart" : "नागरिक कानूनी कार्रवाई प्रवाह चार्ट"}
+          </h3>
+          <p className="section-subtitle-hub">
+            {lang === 'en' 
+              ? "Follow these crucial steps sequentially when facing police interaction or filing a complaint."
+              : "पुलिस बातचीत का सामना करते समय या शिकायत दर्ज करते समय अनुक्रम में इन महत्वपूर्ण चरणों का पालन करें।"}
+          </p>
+          <div className="flowchart-container">
+            <div className="flow-step">
+              <div className="flow-step-num">1</div>
+              <div className="flow-step-title">{lang === 'en' ? "Encounter" : "पुलिस सामना"}</div>
+              <p className="flow-step-desc">
+                {lang === 'en' 
+                  ? "Remain calm. Do not physically resist. Ask for the officer's name, ID, and police station."
+                  : "शांत रहें। शारीरिक रूप से विरोध न करें। अधिकारी का नाम, आईडी और पुलिस स्टेशन पूछें।"}
+              </p>
+            </div>
+            <div className="flow-connector">➔</div>
+            <div className="flow-step">
+              <div className="flow-step-num">2</div>
+              <div className="flow-step-title">{lang === 'en' ? "Interrogation" : "पूछताछ व तलाशी"}</div>
+              <p className="flow-step-desc">
+                {lang === 'en' 
+                  ? "Show your ID. You have the right to remain silent. Do not confess or sign blank papers."
+                  : "अपनी आईडी दिखाएं। आपके पास चुप रहने का अधिकार है। अपराध स्वीकार न करें या खाली कागजों पर हस्ताक्षर न करें।"}
+              </p>
+            </div>
+            <div className="flow-connector">➔</div>
+            <div className="flow-step">
+              <div className="flow-step-num">3</div>
+              <div className="flow-step-title">{lang === 'en' ? "Arrest/Detention" : "गिरफ्तारी / हिरासत"}</div>
+              <p className="flow-step-desc">
+                {lang === 'en' 
+                  ? "Ask for the grounds. Demand an arrest memo. Relatives must be informed immediately."
+                  : "गिरफ्तारी का कारण पूछें। अरेस्ट मेमो की मांग करें। रिश्तेदारों को तुरंत सूचित किया जाना चाहिए।"}
+              </p>
+            </div>
+            <div className="flow-connector">➔</div>
+            <div className="flow-step">
+              <div className="flow-step-num">4</div>
+              <div className="flow-step-title">{lang === 'en' ? "Remedy (FIR Refused)" : "उपाय (FIR इनकार)"}</div>
+              <p className="flow-step-desc">
+                {lang === 'en' 
+                  ? "If local station refuses FIR, write direct complaint to District SP under Sec 173(4) BNSS."
+                  : "यदि स्थानीय थाना एफआईआर दर्ज करने से मना करता है, तो धारा 173(4) BNSS के तहत जिला एसपी को शिकायत लिखें।"}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Anchored Section for Rights Exploration */}
+        <div id="explore-rights" style={{ scrollMarginTop: '120px' }}></div>
+
         {/* Urgent Action Banners */}
         <BannerSection 
           t={t} 
@@ -243,15 +398,73 @@ ____________________
       {/* Institutional Footer */}
       <footer className="app-footer">
         <div className="footer-inner">
-          <p className="sources-text">
-            <strong>Sources:</strong> Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023 | Bharatiya Nyaya Sanhita (BNS), 2023 | Constitution of India
-          </p>
-          <p className="disclaimer-text">
-            Disclaimer: This application is for educational and guidance purposes only and does not constitute formal legal advice. If you require legal assistance, please contact a qualified advocate.
-          </p>
-          <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>
-            &copy; 2026 Adhikar. Designed for Independence Day Citizen Welfare Initiative.
-          </p>
+          <div className="footer-links-grid">
+            <div className="footer-column brand-column" style={{ gridColumn: 'span 2' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
+                <img src="/logo.jpg" alt="Citizen Shield Logo" style={{ width: '45px', height: '45px', borderRadius: '8px', border: '1px solid var(--border-color)' }} />
+                <h4 style={{ margin: 0, textTransform: 'none', fontSize: '1.3rem', letterSpacing: '-0.02em', fontWeight: 800 }}>Citizen Shield</h4>
+              </div>
+              <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', lineHeight: '1.6', maxWidth: '360px', marginBottom: '1.5rem' }}>
+                {lang === 'en' 
+                  ? "Citizen Shield is an open-source civic initiative designed to translate complex legal clauses of the Bharatiya Nagarik Suraksha Sanhita (BNSS) and BNS 2023 into simple, actionable guidelines. Our mission is to promote legal literacy and prevent citizen harassment."
+                  : "सिटीजन शील्ड एक ओपन-सोर्स नागरिक पहल है जिसे भारतीय नागरिक सुरक्षा संहिता (BNSS) और BNS 2023 के जटिल कानूनी अनुच्छेदों को सरल, व्यावहारिक दिशा-निर्देशों में अनुवाद करने के लिए डिज़ाइन किया गया है। हमारा मिशन कानूनी साक्षरता को बढ़ावा देना और नागरिक उत्पीड़न को रोकना है।"}
+              </p>
+            </div>
+            <div className="footer-column">
+              <h4>{lang === 'en' ? "Rights Explorer" : "अधिकार एक्सप्लोरर"}</h4>
+              <ul>
+                <li><a href="#explore-rights">{lang === 'en' ? "Arrest & Detention" : "गिरफ्तारी और हिरासत"}</a></li>
+                <li><a href="#explore-rights">{lang === 'en' ? "Search & Seizure" : "तलाशी और जब्ती"}</a></li>
+                <li><a href="#explore-rights">{lang === 'en' ? "FIR Refusal Remedies" : "FIR इनकार के उपाय"}</a></li>
+                <li><a href="#explore-rights">{lang === 'en' ? "Bribe & Misconduct" : "रिश्वत और दुर्व्यवहार"}</a></li>
+                <li><a href="#explore-rights">{lang === 'en' ? "Women Safety Laws" : "महिला सुरक्षा कानून"}</a></li>
+              </ul>
+            </div>
+            <div className="footer-column">
+              <h4>{lang === 'en' ? "Legal Framework" : "कानूनी ढांचा"}</h4>
+              <ul>
+                <li><a href="https://www.mha.gov.in" target="_blank" rel="noreferrer">Bharatiya Nagarik Suraksha Sanhita (BNSS)</a></li>
+                <li><a href="https://www.mha.gov.in" target="_blank" rel="noreferrer">Bharatiya Nyaya Sanhita (BNS)</a></li>
+                <li><a href="https://www.mha.gov.in" target="_blank" rel="noreferrer">Bharatiya Sakshya Adhiniyam (BSA)</a></li>
+                <li><a href="https://www.india.gov.in" target="_blank" rel="noreferrer">Constitution of India</a></li>
+                <li><a href="https://www.mha.gov.in" target="_blank" rel="noreferrer">Code of Criminal Procedure (CrPC) Archive</a></li>
+              </ul>
+            </div>
+            <div className="footer-column">
+              <h4>{lang === 'en' ? "Quick Services" : "त्वरित सेवाएं"}</h4>
+              <ul>
+                <li><a href="#" onClick={(e) => { e.preventDefault(); setIsSosOpen(true); }}>{lang === 'en' ? "SOS Checklist Protocol" : "SOS चेकलिस्ट प्रोटोकॉल"}</a></li>
+                <li><a href="#" onClick={(e) => { e.preventDefault(); setIsFirOpen(true); }}>{lang === 'en' ? "Draft SP Complaint Letter" : "SP शिकायत पत्र का मसौदा"}</a></li>
+                <li><a href="tel:112">{lang === 'en' ? "National Emergency (112)" : "राष्ट्रीय आपातकाल (112)"}</a></li>
+                <li><a href="tel:181">{lang === 'en' ? "State CM Helpline (181)" : "राज्य CM हेल्पलाइन (181)"}</a></li>
+                <li><a href="tel:1930">{lang === 'en' ? "Cyber Crime Reporting (1930)" : "साइबर अपराध रिपोर्टिंग (1930)"}</a></li>
+              </ul>
+            </div>
+            <div className="footer-column">
+              <h4>{lang === 'en' ? "Official Government Portals" : "आधिकारिक सरकारी पोर्टल"}</h4>
+              <ul>
+                <li><a href="https://digitalpolice.gov.in" target="_blank" rel="noreferrer">Digital Police Portal India</a></li>
+                <li><a href="https://cybercrime.gov.in" target="_blank" rel="noreferrer">National Cyber Crime Reporting Portal</a></li>
+                <li><a href="https://nalsa.gov.in" target="_blank" rel="noreferrer">National Legal Services Authority (NALSA)</a></li>
+                <li><a href="https://www.mha.gov.in" target="_blank" rel="noreferrer">Ministry of Home Affairs (MHA)</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="footer-bottom-info">
+            <p className="sources-text">
+              <strong>Sources:</strong> Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023 | Bharatiya Nyaya Sanhita (BNS), 2023 | Constitution of India
+            </p>
+            <p className="disclaimer-text">
+              Disclaimer: This application is for educational and guidance purposes only and does not constitute formal legal advice. If you require legal assistance, please contact a qualified advocate.
+            </p>
+            <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '0.5rem', fontWeight: 600 }}>
+              &copy; 2026 Citizen Shield. Designed for Independence Day Citizen Welfare Initiative.
+            </p>
+            <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '0.25rem', fontWeight: 700 }}>
+              Made with ❤️ by Pratik | Sponsored by Let's Code
+            </p>
+          </div>
         </div>
       </footer>
     </>
