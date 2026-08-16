@@ -50,7 +50,17 @@ export const translationsData = {
     form_details: "Details of Incident & Offense",
     form_submit: "Generate Letter",
     letter_preview: "Drafted Letter Preview",
-    download_txt: "Download .TXT"
+    download_txt: "Download .TXT",
+    faq_title: "Frequently Asked Questions",
+    faq_subtitle: "Common Legal Myths & Citizen Answers verified under BNSS 2023, BNS, and Supreme Court rulings",
+    wizard_title: "\"Am I Detained?\" Wizard",
+    wizard_subtitle: "Quick interactive diagnostic flow to check your current legal custody status.",
+    wizard_q1: "1. Did the police officer explicitly state that you are free to go?",
+    wizard_q2: "2. Are the officers ordering you to accompany them to the police station?",
+    wizard_q3: "3. Have they shown an Arrest Warrant or prepared a signed Arrest Memo?",
+    wizard_status: "Your Legal Status:",
+    wizard_btn_next: "Next",
+    wizard_btn_reset: "Reset Wizard",
   },
   hi: {
     hero_badge: "अपने अधिकारों को जानें",
@@ -103,6 +113,16 @@ export const translationsData = {
     form_details: "घटना और अपराध का विवरण",
     form_submit: "पत्र जनरेट करें",
     letter_preview: "शिकायत पत्र का पूर्वावलोकन",
-    download_txt: ".TXT डाउनलोड करें"
+    download_txt: ".TXT डाउनलोड करें",
+    faq_title: "अक्सर पूछे जाने वाले प्रश्न",
+    faq_subtitle: "BNSS 2023, BNS और सुप्रीम कोर्ट के फैसलों के तहत सत्यापित आम कानूनी मिथक और उनके जवाब",
+    wizard_title: "\"क्या मुझे हिरासत में लिया गया है?\" विज़ार्ड",
+    wizard_subtitle: "आपकी वर्तमान कानूनी हिरासत स्थिति की जांच करने के लिए त्वरित इंटरैक्टिव टूल।",
+    wizard_q1: "1. क्या पुलिस अधिकारी ने स्पष्ट रूप से कहा कि आप जाने के लिए स्वतंत्र हैं?",
+    wizard_q2: "2. क्या अधिकारी आपको अपने साथ पुलिस स्टेशन चलने का आदेश दे रहे हैं?",
+    wizard_q3: "3. क्या उन्होंने कोई गिरफ्तारी वारंट दिखाया है या हस्ताक्षरित गिरफ्तारी मेमो तैयार किया है?",
+    wizard_status: "आपकी कानूनी स्थिति:",
+    wizard_btn_next: "आगे बढ़ें",
+    wizard_btn_reset: "विज़ार्ड रीसेट करें",
   }
 };

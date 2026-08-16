@@ -10,6 +10,8 @@ import EmptyState from '../components/EmptyState';
 import SOSModal from '../components/SOSModal';
 import FIRLetterModal from '../components/FIRLetterModal';
 import SituationCard from '../components/SituationCard';
+import WizardSection from '../components/WizardSection';
+import FaqSection from '../components/FaqSection';
 
 export default function Home() {
   const [lang, setLang] = useState('en');
@@ -329,6 +331,9 @@ ____________________
           </div>
         </section>
 
+        {/* Am I Detained Interactive Diagnostic Tool */}
+        <WizardSection t={t} lang={lang} />
+
         {/* Anchored Section for Rights Exploration */}
         <div id="explore-rights" style={{ scrollMarginTop: '120px' }}></div>
 
@@ -376,6 +381,9 @@ ____________________
             />
           ))}
         </div>
+
+        {/* Frequently Asked Questions */}
+        <FaqSection t={t} lang={lang} />
       </main>
 
       {/* Reusable Emergency Modals */}
