@@ -402,10 +402,10 @@ const data = {
         ],
         detailed_steps: [
           "वारंट की मांग करें: विशिष्ट आपात स्थितियों को छोड़कर, पुलिस को मजिस्ट्रेट द्वारा जारी तलाशी वारंट पेश करना होगा।",
-          "पुलिस अधिकारियों की तलाशी लें: पुलिस अधिकारियों को अपने परिसर में प्रवेश करने से पहले खुद की तलाशी देने के लिए विनम्रता से कहें। यह उन्हें आपकी संपत्ति पर अवैध सामान (ड्रग्स, हथियार) रखने से रोकता है।",
+          "police अधिकारियों की तलाशी लें: पुलिस अधिकारियों को अपने परिसर में प्रवेश करने से पहले खुद की तलाशी देने के लिए विनम्रता से कहें। यह उन्हें आपकी संपत्ति पर अवैध सामान (ड्रग्स, हथियार) रखने से रोकता है।",
           "स्वतंत्र गवाहों पर जोर दें: BNSS की धारा 185 के तहत, तलाशी कम से कम दो स्वतंत्र, सम्मानित स्थानीय निवासियों की उपस्थिति में होनी चाहिए। पुलिस को अपने अनुकूल गवाह लाने न दें।",
           "जब्ती ज्ञापन प्राप्त करें: यदि पुलिस कोई सामान जब्त करती है, तो उन्हें जब्त की गई सभी वस्तुओं की सूची (Seizure Memo) तैयार करनी होगी। सुनिश्चित करें कि इस पर गवाहों के हस्ताक्षर हों और इसकी एक प्रति तुरंत प्राप्त करें। खाली पन्नों पर हस्ताक्षर न करें।",
-          "महिला की तलाशी: यदि किसी महिला की शारीरिक तलाशी लेने की आवश्यकता है, तो यह कड़ाई से एक महिला पुलिस अधिकारी द्वारा ही शालीनता का पूरा ध्यान रखते हुए की जानी चाहिए (BNSS धारा 51(2))।"
+          "महिला की तलाशी: यदि किसी महिला की शारीरिक तलाशी लेने की आवश्यकता है, तो यह कड़ाई से एक महिला पुलिस अधिकारी द्वारा ही शालीनता का पूरा ध्यान रखते हुए की होनी चाहिए (BNSS धारा 51(2))।"
         ],
         rights: [
           {
@@ -492,7 +492,7 @@ const data = {
           }
         ],
         complaints: [
-          { step: "1", text: "रिवत न दें। अधिकारी का नाम, पद, पुलिस स्टेशन और सही मांग नोट करें।" },
+          { step: "1", text: "रिश्वत न दें। अधिकारी का नाम, पद, पुलिस स्टेशन और सही मांग नोट करें।" },
           { step: "2", text: "तुरंत भ्रष्टाचार निरोधक हेल्पलाइन (1064) पर कॉल करें या स्थानीय भ्रष्टाचार निरोधक ब्यूरो (ACB) कार्यालय से संपर्क करें।" },
           { step: "3", text: "कार्रवाई शुरू करने के लिए एसीबी अधिकारियों को ऑडियो/वीडियो रिकॉर्डिंग और अन्य सबूत प्रदान करें।" }
         ],
@@ -552,8 +552,8 @@ const translations = {
     tool_action: "Draft Letter Now",
     search_placeholder: "Search situations (e.g. arrest, search, bribe)...",
     situations_heading: "Select a Situation",
-    placeholder_title: "Select a situation to read your rights",
-    placeholder_desc: "Get simple, legal-backed instructions you can read in 30 seconds.",
+    placeholder_title: "Adhikar Guide",
+    placeholder_desc: "Select any situation below to instantly read your legal rights and checklists in under 30 seconds.",
     tab_action: "What To Do",
     tab_rights: "Your Rights",
     tab_complain: "Where to Complain",
@@ -596,8 +596,8 @@ const translations = {
     tool_action: "अभी पत्र ड्राफ्ट करें",
     search_placeholder: "स्थितियों को खोजें (जैसे गिरफ्तारी, तलाशी, रिश्वत)...",
     situations_heading: "एक स्थिति का चयन करें",
-    placeholder_title: "अपने अधिकारों को पढ़ने के लिए एक स्थिति चुनें",
-    placeholder_desc: "30 सेकंड में पढ़ी जा सकने वाली सरल, कानूनी-समर्थित निर्देश प्राप्त करें।",
+    placeholder_title: "अधिकार गाइड",
+    placeholder_desc: "कानूनी अधिकारों और 30-सेकंड की चेकलिस्ट को तुरंत पढ़ने के लिए नीचे किसी भी स्थिति का चयन करें।",
     tab_action: "क्या करें",
     tab_rights: "आपके अधिकार",
     tab_complain: "कहां शिकायत करें",
@@ -633,7 +633,7 @@ const translations = {
   }
 };
 
-// Inline SVG components to ensure no package import/version failures
+// Inline SVG components
 const Icons = {
   Stop: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect></svg>,
   UserX: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="17" y1="8" x2="22" y2="13"></line><line x1="22" y1="8" x2="17" y2="13"></line></svg>,
@@ -648,7 +648,8 @@ const Icons = {
   PhoneCall: () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path><path d="M14.05 2a9 9 0 0 1 7.95 7.95"></path><path d="M14.05 6A5 5 0 0 1 18 9.95"></path></svg>,
   X: () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>,
   Download: () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>,
-  Back: () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+  ChevronUp: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>,
+  ChevronDown: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
 };
 
 const getIcon = (name) => {
@@ -707,8 +708,6 @@ export default function Home() {
            item.quick_actions.some(act => act.toLowerCase().includes(query)) ||
            item.detailed_steps.some(step => step.toLowerCase().includes(query));
   });
-
-  const activeItem = list.find(s => s.id === activeId);
 
   // Generate Letter Handler
   const handleFormSubmit = (e) => {
@@ -880,119 +879,122 @@ ____________________
           )}
         </section>
 
-        {/* Workspace Grid */}
-        <div className="workspace-grid">
-          {/* Sidebar */}
-          <section className={`sidebar-panel ${activeId ? 'hidden-mobile' : ''}`}>
-            <h3 className="sidebar-title">{t.situations_heading}</h3>
-            {filteredSituations.map(item => (
-              <button 
-                key={item.id} 
-                className={`situation-button ${activeId === item.id ? 'active' : ''}`}
-                onClick={() => { setActiveId(item.id); setActiveTab('tab-action'); }}
-              >
-                {getIcon(item.icon)}
-                <span>{item.title}</span>
-              </button>
-            ))}
+        {/* Default Illustration Banner */}
+        {!activeId && !searchQuery && (
+          <section className="empty-state-banner">
+            <img src="/legal_rights.jpg" alt="Legal Rights Illustration" style={{ width: '160px', height: '160px', borderRadius: '12px', opacity: 0.9 }} />
+            <h3>{t.placeholder_title}</h3>
+            <p>{t.placeholder_desc}</p>
           </section>
+        )}
 
-          {/* Details */}
-          <section className={`detail-panel ${!activeId ? 'hidden-mobile' : ''}`}>
-            {!activeItem ? (
-              <div className="placeholder-view">
-                <img src="/legal_rights.jpg" alt="Legal Rights Illustration" style={{ width: '180px', height: '180px', marginBottom: '1.5rem', borderRadius: '12px', opacity: 0.85 }} />
-                <h3>{t.placeholder_title}</h3>
-                <p>{t.placeholder_desc}</p>
-              </div>
-            ) : (
-              <div>
-                <div className="detail-header">
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                    <button className="btn icon-btn mobile-back-btn" onClick={() => setActiveId(null)} aria-label="Back">
-                      <Icons.Back />
-                    </button>
+        {/* Accordion List Layout */}
+        <div className="accordion-list">
+          {filteredSituations.map(item => {
+            const isActive = activeId === item.id;
+            return (
+              <div key={item.id} className={`situation-card ${isActive ? 'active' : ''}`}>
+                <button 
+                  className="situation-card-header"
+                  onClick={() => {
+                    if (isActive) {
+                      setActiveId(null);
+                    } else {
+                      setActiveId(item.id);
+                      setActiveTab('tab-action');
+                    }
+                  }}
+                >
+                  <div className="header-title-wrapper">
+                    {getIcon(item.icon)}
                     <div>
-                      <span className="category-tag">{activeItem.category}</span>
-                      <h2 className="detail-title">{activeItem.title}</h2>
+                      <span className="category-tag-small">{item.category}</span>
+                      <h3>{item.title}</h3>
                     </div>
                   </div>
-                </div>
+                  <span className="chevron-icon">
+                    {isActive ? <Icons.ChevronUp /> : <Icons.ChevronDown />}
+                  </span>
+                </button>
 
-                {/* Tabs Nav */}
-                <div className="tab-nav">
-                  <button className={`tab-trigger ${activeTab === 'tab-action' ? 'active' : ''}`} onClick={() => setActiveTab('tab-action')}>{t.tab_action}</button>
-                  <button className={`tab-trigger ${activeTab === 'tab-rights' ? 'active' : ''}`} onClick={() => setActiveTab('tab-rights')}>{t.tab_rights}</button>
-                  <button className={`tab-trigger ${activeTab === 'tab-complain' ? 'active' : ''}`} onClick={() => setActiveTab('tab-complain')}>{t.tab_complain}</button>
-                </div>
-
-                {/* Tab content */}
-                {activeTab === 'tab-action' && (
-                  <div className="tab-content">
-                    <div className="quick-box">
-                      <h4 className="quick-box-title" style={{ color: 'var(--accent-color)' }}>
-                        <span>⚡</span>
-                        {t.quick_read_title}
-                      </h4>
-                      <ul className="quick-list">
-                        {activeItem.quick_actions.map((act, i) => <li key={i}>{act}</li>)}
-                      </ul>
+                {isActive && (
+                  <div className="situation-card-body">
+                    {/* Tabs Nav */}
+                    <div className="tab-nav">
+                      <button className={`tab-trigger ${activeTab === 'tab-action' ? 'active' : ''}`} onClick={() => setActiveTab('tab-action')}>{t.tab_action}</button>
+                      <button className={`tab-trigger ${activeTab === 'tab-rights' ? 'active' : ''}`} onClick={() => setActiveTab('tab-rights')}>{t.tab_rights}</button>
+                      <button className={`tab-trigger ${activeTab === 'tab-complain' ? 'active' : ''}`} onClick={() => setActiveTab('tab-complain')}>{t.tab_complain}</button>
                     </div>
-                    <div style={{ marginTop: '1.5rem' }}>
-                      <h4 style={{ fontSize: '0.95rem', fontWeight: 800, marginBottom: '0.75rem' }}>{t.detailed_steps_title}</h4>
-                      <ol className="step-list">
-                        {activeItem.detailed_steps.map((step, i) => (
-                          <li key={i} dangerouslySetInnerHTML={{ __html: step }}></li>
-                        ))}
-                      </ol>
-                    </div>
-                  </div>
-                )}
 
-                {activeTab === 'tab-rights' && (
-                  <div className="tab-content">
-                    <h4 style={{ fontSize: '0.95rem', fontWeight: 800, marginBottom: '1rem' }}>{t.legal_backing_title}</h4>
-                    <div className="laws-container">
-                      {activeItem.rights.map((r, i) => (
-                        <div key={i} className="law-card">
-                          <h5 className="law-title">{r.section}</h5>
-                          <p className="law-desc">{r.desc}</p>
+                    {/* Tab content */}
+                    {activeTab === 'tab-action' && (
+                      <div className="tab-content">
+                        <div className="quick-box">
+                          <h4 className="quick-box-title" style={{ color: 'var(--accent-color)' }}>
+                            <span>⚡</span>
+                            {t.quick_read_title}
+                          </h4>
+                          <ul className="quick-list">
+                            {item.quick_actions.map((act, i) => <li key={i}>{act}</li>)}
+                          </ul>
                         </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {activeTab === 'tab-complain' && (
-                  <div className="tab-content">
-                    <h4 style={{ fontSize: '0.95rem', fontWeight: 800, marginBottom: '1rem' }}>{t.complaint_procedure_title}</h4>
-                    <div className="complaint-timeline">
-                      {activeItem.complaints.map((c, i) => (
-                        <div key={i} className="complaint-step">
-                          <div className="step-num">{c.step}</div>
-                          <div className="step-text">{c.text}</div>
+                        <div style={{ marginTop: '1.5rem' }}>
+                          <h4 style={{ fontSize: '0.95rem', fontWeight: 800, marginBottom: '0.75rem' }}>{t.detailed_steps_title}</h4>
+                          <ol className="step-list">
+                            {item.detailed_steps.map((step, i) => (
+                              <li key={i} dangerouslySetInnerHTML={{ __html: step }}></li>
+                            ))}
+                          </ol>
                         </div>
-                      ))}
-                    </div>
-                    <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: '1.25rem' }}>
-                      <h5 style={{ fontSize: '0.8rem', textTransform: 'uppercase', color: 'var(--text-secondary)', fontWeight: 700 }}>{t.relevant_helplines}</h5>
-                      <div className="helplines-grid">
-                        {activeItem.helplines.map((h, i) => (
-                          <a key={i} href={`tel:${h.number}`} className="helpline-card">
-                            <Icons.PhoneCall />
-                            <div className="helpline-card-text">
-                              <span className="helpline-label">{h.name}</span>
-                              <span className="helpline-number">{h.number}</span>
-                            </div>
-                          </a>
-                        ))}
                       </div>
-                    </div>
+                    )}
+
+                    {activeTab === 'tab-rights' && (
+                      <div className="tab-content">
+                        <h4 style={{ fontSize: '0.95rem', fontWeight: 800, marginBottom: '1rem' }}>{t.legal_backing_title}</h4>
+                        <div className="laws-container">
+                          {item.rights.map((r, i) => (
+                            <div key={i} className="law-card">
+                              <h5 className="law-title">{r.section}</h5>
+                              <p className="law-desc">{r.desc}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {activeTab === 'tab-complain' && (
+                      <div className="tab-content">
+                        <h4 style={{ fontSize: '0.95rem', fontWeight: 800, marginBottom: '1rem' }}>{t.complaint_procedure_title}</h4>
+                        <div className="complaint-timeline">
+                          {item.complaints.map((c, i) => (
+                            <div key={i} className="complaint-step">
+                              <div className="step-num">{c.step}</div>
+                              <div className="step-text">{c.text}</div>
+                            </div>
+                          ))}
+                        </div>
+                        <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: '1.25rem' }}>
+                          <h5 style={{ fontSize: '0.8rem', textTransform: 'uppercase', color: 'var(--text-secondary)', fontWeight: 700 }}>{t.relevant_helplines}</h5>
+                          <div className="helplines-grid">
+                            {item.helplines.map((h, i) => (
+                              <a key={i} href={`tel:${h.number}`} className="helpline-card">
+                                <Icons.PhoneCall />
+                                <div className="helpline-card-text">
+                                  <span className="helpline-label">{h.name}</span>
+                                  <span className="helpline-number">{h.number}</span>
+                                </div>
+                              </a>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
-            )}
-          </section>
+            );
+          })}
         </div>
       </main>
 
