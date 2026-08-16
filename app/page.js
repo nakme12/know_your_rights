@@ -901,7 +901,7 @@ ____________________
           <section className={`detail-panel ${!activeId ? 'hidden-mobile' : ''}`}>
             {!activeItem ? (
               <div className="placeholder-view">
-                <Icons.ShieldAlert />
+                <img src="/legal_rights.jpg" alt="Legal Rights Illustration" style={{ width: '180px', height: '180px', marginBottom: '1.5rem', borderRadius: '12px', opacity: 0.85 }} />
                 <h3>{t.placeholder_title}</h3>
                 <p>{t.placeholder_desc}</p>
               </div>
