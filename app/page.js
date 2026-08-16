@@ -382,6 +382,126 @@ ____________________
           ))}
         </div>
 
+        {/* Good Practices & Verification Section */}
+        <section className="good-practices-section" style={{ marginTop: '5rem', borderTop: '1px solid var(--border-color)', paddingTop: '4rem' }}>
+          <h3 className="section-title-hub">
+            {lang === 'en' ? "Good Practices for Citizens" : "नागरिकों के लिए सर्वोत्तम प्रथाएं"}
+          </h3>
+          <p className="section-subtitle-hub">
+            {lang === 'en' 
+              ? "Recommended guidelines to keep in mind during any police interaction."
+              : "पुलिस से बातचीत के दौरान ध्यान रखने योग्य अनुशंसित दिशा-निर्देश।"}
+          </p>
+          <div className="helpline-hub-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.25rem' }}>
+            <div className="hub-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+              <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>🧘</div>
+              <h4 style={{ fontSize: '0.95rem', fontWeight: 800, marginBottom: '0.25rem' }}>
+                {lang === 'en' ? "Stay Calm & Polite" : "शांत और विनम्र रहें"}
+              </h4>
+              <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>
+                {lang === 'en' ? "Avoid physical resistance or verbal argument. State your points firmly." : "शारीरिक विरोध या बहस से बचें। अपनी बात दृढ़ता से कहें।"}
+              </p>
+            </div>
+            <div className="hub-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+              <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>📝</div>
+              <h4 style={{ fontSize: '0.95rem', fontWeight: 800, marginBottom: '0.25rem' }}>
+                {lang === 'en' ? "Keep Records" : "विवरण रिकॉर्ड रखें"}
+              </h4>
+              <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>
+                {lang === 'en' ? "Note dates, times, badge numbers, names of officers and witnesses." : "तारीखें, समय, बैज नंबर, अधिकारियों और गवाहों के नाम नोट करें।"}
+              </p>
+            </div>
+            <div className="hub-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+              <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>🔍</div>
+              <h4 style={{ fontSize: '0.95rem', fontWeight: 800, marginBottom: '0.25rem' }}>
+                {lang === 'en' ? "Read Before Signing" : "हस्ताक्षर से पहले पढ़ें"}
+              </h4>
+              <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>
+                {lang === 'en' ? "Never sign blank papers or confessions you do not agree with." : "सहमत न होने पर कभी भी खाली कागजात या बयानों पर हस्ताक्षर न करें।"}
+              </p>
+            </div>
+            <div className="hub-card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+              <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>⚖️</div>
+              <h4 style={{ fontSize: '0.95rem', fontWeight: 800, marginBottom: '0.25rem' }}>
+                {lang === 'en' ? "Preserve Evidence" : "साक्ष्य सुरक्षित रखें"}
+              </h4>
+              <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>
+                {lang === 'en' ? "Retain photos, videos, medical slips, or documents lawfully." : "तस्वीरें, वीडियो, मेडिकल पर्चियां या दस्तावेज कानूनी रूप से सुरक्षित रखें।"}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Verification of Information & Official Sources */}
+        <section className="sources-verification-section" style={{ marginTop: '5rem', borderTop: '1px solid var(--border-color)', paddingTop: '4rem' }}>
+          <h3 className="section-title-hub">
+            {lang === 'en' ? "Official Government Portals" : "आधिकारिक सरकारी पोर्टल"}
+          </h3>
+          <p className="section-subtitle-hub">
+            {lang === 'en' 
+              ? "Verify legal clauses directly against the latest official central laws and gazette notifications."
+              : "नवीनतम आधिकारिक केंद्रीय कानूनों और राजपत्र अधिसूचनाओं के खिलाफ कानूनी धाराओं को सीधे सत्यापित करें।"}
+          </p>
+          <div className="helpline-hub-grid">
+            <a href="https://www.indiacode.nic.in" target="_blank" rel="noreferrer" className="hub-card" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="hub-card-icon">🏛️</div>
+              <div className="hub-card-content">
+                <h4>India Code</h4>
+                <p>{lang === 'en' ? "Official repository of all central laws & acts." : "सभी केंद्रीय कानूनों और अधिनियमों का आधिकारिक भंडार।"}</p>
+                <span className="hub-call-btn" style={{ padding: '0.35rem 0.75rem', fontSize: '0.75rem' }}>{lang === 'en' ? "Verify ↗" : "सत्यापित करें ↗"}</span>
+              </div>
+            </a>
+            <a href="https://www.mha.gov.in" target="_blank" rel="noreferrer" className="hub-card" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="hub-card-icon">📝</div>
+              <div className="hub-card-content">
+                <h4>Ministry of Home Affairs</h4>
+                <p>{lang === 'en' ? "Updates on BNSS 2023, BNS, and criminal reforms." : "BNSS 2023, BNS और आपराधिक सुधारों पर आधिकारिक अपडेट।"}</p>
+                <span className="hub-call-btn" style={{ padding: '0.35rem 0.75rem', fontSize: '0.75rem' }}>{lang === 'en' ? "Verify ↗" : "सत्यापित करें ↗"}</span>
+              </div>
+            </a>
+            <a href="https://nhrc.nic.in" target="_blank" rel="noreferrer" className="hub-card" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="hub-card-icon">🛡️</div>
+              <div className="hub-card-content">
+                <h4>NHRC Portal</h4>
+                <p>{lang === 'en' ? "National Human Rights Commission grievance portal." : "राष्ट्रीय मानव अधिकार आयोग शिकायत पोर्टल।"}</p>
+                <span className="hub-call-btn" style={{ padding: '0.35rem 0.75rem', fontSize: '0.75rem' }}>{lang === 'en' ? "Verify ↗" : "सत्यापित करें ↗"}</span>
+              </div>
+            </a>
+            <a href="https://sci.gov.in" target="_blank" rel="noreferrer" className="hub-card" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="hub-card-icon">⚖️</div>
+              <div className="hub-card-content">
+                <h4>Supreme Court of India</h4>
+                <p>{lang === 'en' ? "Access historic landmark rulings & directives." : "ऐतिहासिक मील का पत्थर फैसलों और निर्देशों तक पहुंचें।"}</p>
+                <span className="hub-call-btn" style={{ padding: '0.35rem 0.75rem', fontSize: '0.75rem' }}>{lang === 'en' ? "Verify ↗" : "सत्यापित करें ↗"}</span>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        {/* Project Core Principles */}
+        <section className="principles-section" style={{ marginTop: '5rem', borderTop: '1px solid var(--border-color)', paddingTop: '4rem' }}>
+          <h3 className="section-title-hub">
+            {lang === 'en' ? "Our Core Principles" : "हमारे मुख्य सिद्धांत"}
+          </h3>
+          <div className="helpline-hub-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.25rem', marginTop: '2rem' }}>
+            <div className="hub-card" style={{ padding: '1.5rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <span style={{ fontSize: '1.75rem' }}>🔒</span>
+              <h5 style={{ fontWeight: 800, marginTop: '0.5rem', fontSize: '0.9rem' }}>{lang === 'en' ? "100% Private" : "100% निजी"}</h5>
+              <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>{lang === 'en' ? "No registration or personal data required." : "कोई पंजीकरण या व्यक्तिगत डेटा की आवश्यकता नहीं।"}</p>
+            </div>
+            <div className="hub-card" style={{ padding: '1.5rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <span style={{ fontSize: '1.75rem' }}>🗣️</span>
+              <h5 style={{ fontWeight: 800, marginTop: '0.5rem', fontSize: '0.9rem' }}>{lang === 'en' ? "Plain Language" : "सरल भाषा"}</h5>
+              <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>{lang === 'en' ? "Legal guidelines explained in plain terms." : "सरल शब्दों में समझाई गई कानूनी रूपरेखा।"}</p>
+            </div>
+            <div className="hub-card" style={{ padding: '1.5rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <span style={{ fontSize: '1.75rem' }}>🇮🇳</span>
+              <h5 style={{ fontWeight: 800, marginTop: '0.5rem', fontSize: '0.9rem' }}>{lang === 'en' ? "Official Directives" : "आधिकारिक निर्देश"}</h5>
+              <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>{lang === 'en' ? "Directly sourced from Indian Constitution & SC." : "सीधे भारतीय संविधान और एससी से संकलित।"}</p>
+            </div>
+          </div>
+        </section>
+
         {/* Frequently Asked Questions */}
         <FaqSection t={t} lang={lang} />
       </main>
@@ -471,7 +591,7 @@ ____________________
               &copy; 2026 Citizen Shield. Designed for Independence Day Citizen Welfare Initiative.
             </p>
             <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '0.25rem', fontWeight: 700 }}>
-              Made with ❤️ by Pratik | Sponsored by Let's Code
+              Made with ❤️ by Pratik | Sponsored by Let's Code | जय हिन्द 🇮🇳
             </p>
           </div>
         </div>
