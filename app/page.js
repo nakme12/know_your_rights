@@ -5,7 +5,6 @@ import { situationsData } from '../data/situations';
 import { translationsData } from '../data/translations';
 import { Icons } from '../components/Icons';
 import SearchBox from '../components/SearchBox';
-import BannerSection from '../components/BannerSection';
 import EmptyState from '../components/EmptyState';
 import SOSModal from '../components/SOSModal';
 import FIRLetterModal from '../components/FIRLetterModal';
@@ -333,12 +332,7 @@ ____________________
         {/* Anchored Section for Rights Exploration */}
         <div id="explore-rights" style={{ scrollMarginTop: '120px' }}></div>
 
-        {/* Urgent Action Banners */}
-        <BannerSection 
-          t={t} 
-          onSosOpen={() => setIsSosOpen(true)} 
-          onFirOpen={() => setIsFirOpen(true)} 
-        />
+
 
         {/* Modern Search Filter */}
         <SearchBox 
@@ -428,75 +422,7 @@ ____________________
           </div>
         </section>
 
-        {/* Verification of Information & Official Sources */}
-        <section className="sources-verification-section" style={{ marginTop: '5rem', borderTop: '1px solid var(--border-color)', paddingTop: '4rem' }}>
-          <h3 className="section-title-hub">
-            {lang === 'en' ? "Official Government Portals" : "आधिकारिक सरकारी पोर्टल"}
-          </h3>
-          <p className="section-subtitle-hub">
-            {lang === 'en' 
-              ? "Verify legal clauses directly against the latest official central laws and gazette notifications."
-              : "नवीनतम आधिकारिक केंद्रीय कानूनों और राजपत्र अधिसूचनाओं के खिलाफ कानूनी धाराओं को सीधे सत्यापित करें।"}
-          </p>
-          <div className="helpline-hub-grid">
-            <a href="https://www.indiacode.nic.in" target="_blank" rel="noreferrer" className="hub-card" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div className="hub-card-icon">🏛️</div>
-              <div className="hub-card-content">
-                <h4>India Code</h4>
-                <p>{lang === 'en' ? "Official repository of all central laws & acts." : "सभी केंद्रीय कानूनों और अधिनियमों का आधिकारिक भंडार।"}</p>
-                <span className="hub-call-btn" style={{ padding: '0.35rem 0.75rem', fontSize: '0.75rem' }}>{lang === 'en' ? "Verify ↗" : "सत्यापित करें ↗"}</span>
-              </div>
-            </a>
-            <a href="https://www.mha.gov.in" target="_blank" rel="noreferrer" className="hub-card" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div className="hub-card-icon">📝</div>
-              <div className="hub-card-content">
-                <h4>Ministry of Home Affairs</h4>
-                <p>{lang === 'en' ? "Updates on BNSS 2023, BNS, and criminal reforms." : "BNSS 2023, BNS और आपराधिक सुधारों पर आधिकारिक अपडेट।"}</p>
-                <span className="hub-call-btn" style={{ padding: '0.35rem 0.75rem', fontSize: '0.75rem' }}>{lang === 'en' ? "Verify ↗" : "सत्यापित करें ↗"}</span>
-              </div>
-            </a>
-            <a href="https://nhrc.nic.in" target="_blank" rel="noreferrer" className="hub-card" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div className="hub-card-icon">🛡️</div>
-              <div className="hub-card-content">
-                <h4>NHRC Portal</h4>
-                <p>{lang === 'en' ? "National Human Rights Commission grievance portal." : "राष्ट्रीय मानव अधिकार आयोग शिकायत पोर्टल।"}</p>
-                <span className="hub-call-btn" style={{ padding: '0.35rem 0.75rem', fontSize: '0.75rem' }}>{lang === 'en' ? "Verify ↗" : "सत्यापित करें ↗"}</span>
-              </div>
-            </a>
-            <a href="https://sci.gov.in" target="_blank" rel="noreferrer" className="hub-card" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div className="hub-card-icon">⚖️</div>
-              <div className="hub-card-content">
-                <h4>Supreme Court of India</h4>
-                <p>{lang === 'en' ? "Access historic landmark rulings & directives." : "ऐतिहासिक मील का पत्थर फैसलों और निर्देशों तक पहुंचें।"}</p>
-                <span className="hub-call-btn" style={{ padding: '0.35rem 0.75rem', fontSize: '0.75rem' }}>{lang === 'en' ? "Verify ↗" : "सत्यापित करें ↗"}</span>
-              </div>
-            </a>
-          </div>
-        </section>
 
-        {/* Project Core Principles */}
-        <section className="principles-section" style={{ marginTop: '5rem', borderTop: '1px solid var(--border-color)', paddingTop: '4rem' }}>
-          <h3 className="section-title-hub">
-            {lang === 'en' ? "Our Core Principles" : "हमारे मुख्य सिद्धांत"}
-          </h3>
-          <div className="helpline-hub-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.25rem', marginTop: '2rem' }}>
-            <div className="hub-card" style={{ padding: '1.5rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <span style={{ fontSize: '1.75rem' }}>🔒</span>
-              <h5 style={{ fontWeight: 800, marginTop: '0.5rem', fontSize: '0.9rem' }}>{lang === 'en' ? "100% Private" : "100% निजी"}</h5>
-              <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>{lang === 'en' ? "No registration or personal data required." : "कोई पंजीकरण या व्यक्तिगत डेटा की आवश्यकता नहीं।"}</p>
-            </div>
-            <div className="hub-card" style={{ padding: '1.5rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <span style={{ fontSize: '1.75rem' }}>🗣️</span>
-              <h5 style={{ fontWeight: 800, marginTop: '0.5rem', fontSize: '0.9rem' }}>{lang === 'en' ? "Plain Language" : "सरल भाषा"}</h5>
-              <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>{lang === 'en' ? "Legal guidelines explained in plain terms." : "सरल शब्दों में समझाई गई कानूनी रूपरेखा।"}</p>
-            </div>
-            <div className="hub-card" style={{ padding: '1.5rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <span style={{ fontSize: '1.75rem' }}>🇮🇳</span>
-              <h5 style={{ fontWeight: 800, marginTop: '0.5rem', fontSize: '0.9rem' }}>{lang === 'en' ? "Official Directives" : "आधिकारिक निर्देश"}</h5>
-              <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>{lang === 'en' ? "Directly sourced from Indian Constitution & SC." : "सीधे भारतीय संविधान और एससी से संकलित।"}</p>
-            </div>
-          </div>
-        </section>
 
         {/* Frequently Asked Questions */}
         <FaqSection t={t} lang={lang} />
