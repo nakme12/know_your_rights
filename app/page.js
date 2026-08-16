@@ -230,49 +230,29 @@ ____________________
           </div>
         </section>
 
-        {/* National & State Helpline Hub (Moved to Top for Crisis Access) */}
+        {/* National & State Helpline Hub (Editorial Inline Layout) */}
         <section className="helpline-section-hub" style={{ marginTop: '2rem', borderTop: 'none', paddingTop: '0' }}>
-          <h3 className="section-title-hub">
-            {lang === 'en' ? "National & State Helpline Directory" : "राष्ट्रीय एवं राज्य हेल्पलाइन निर्देशिका"}
+          <h3 className="section-title-hub" style={{ textAlign: 'left', marginBottom: '0.5rem' }}>
+            {lang === 'en' ? "Emergency Directory" : "आपातकालीन निर्देशिका"}
           </h3>
-          <p className="section-subtitle-hub" style={{ marginBottom: '2rem' }}>
+          <p className="section-subtitle-hub" style={{ textAlign: 'left', margin: '0 0 1.5rem 0', maxWidth: '100%' }}>
             {lang === 'en' 
-              ? "Instant assistance channels provided by government and municipal authorities for emergency grievance registration."
-              : "आपातकालीन शिकायत पंजीकरण के लिए सरकारी और नगर निगम अधिकारियों द्वारा प्रदान किए गए त्वरित सहायता चैनल।"}
+              ? "Instant assistance channels provided by government and municipal authorities."
+              : "सरकारी और नगर निगम अधिकारियों द्वारा प्रदान किए गए त्वरित सहायता चैनल।"}
           </p>
-          <div className="helpline-hub-grid">
-            <div className="hub-card">
-              <div className="hub-card-icon">📞</div>
-              <div className="hub-card-content">
-                <h4>{lang === 'en' ? "National Emergency Service" : "राष्ट्रीय आपातकालीन सेवा"}</h4>
-                <p>{lang === 'en' ? "Immediate police, fire, or medical dispatch" : "तत्काल पुलिस, अग्नि या चिकित्सा सेवा"}</p>
-                <a href="tel:112" className="hub-call-btn">112</a>
-              </div>
-            </div>
-            <div className="hub-card">
-              <div className="hub-card-icon">🏛️</div>
-              <div className="hub-card-content">
-                <h4>{lang === 'en' ? "CM Helpline Desk" : "मुख्यमंत्री (CM) हेल्पलाइन"}</h4>
-                <p>{lang === 'en' ? "State government public grievance redressal cell" : "राज्य सरकार जन शिकायत निवारण प्रकोष्ठ"}</p>
-                <a href="tel:181" className="hub-call-btn">181 / 1076</a>
-              </div>
-            </div>
-            <div className="hub-card">
-              <div className="hub-card-icon">🛡️</div>
-              <div className="hub-card-content">
-                <h4>{lang === 'en' ? "Cyber Crime Helpdesk" : "साइबर अपराध हेल्पडेस्क"}</h4>
-                <p>{lang === 'en' ? "Report online fraud, identity theft, & scams" : "ऑनलाइन धोखाधड़ी, पहचान चोरी और घोटालों की रिपोर्ट करें"}</p>
-                <a href="tel:1930" className="hub-call-btn">1930</a>
-              </div>
-            </div>
-            <div className="hub-card">
-              <div className="hub-card-icon">👩</div>
-              <div className="hub-card-content">
-                <h4>{lang === 'en' ? "Women Safety Helpline" : "महिला सुरक्षा हेल्पलाइन"}</h4>
-                <p>{lang === 'en' ? "24/7 dedicated support & local squad alert" : "24/7 समर्पित सहायता और स्थानीय पुलिस दस्ता अलर्ट"}</p>
-                <a href="tel:1091" className="hub-call-btn">1091</a>
-              </div>
-            </div>
+          <div className="helpline-inline-list" style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginBottom: '2.5rem' }}>
+            <a href="tel:112" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'var(--danger-bg-light)', color: 'var(--danger-color)', padding: '0.65rem 1.25rem', borderRadius: '50px', textDecoration: 'none', fontWeight: 700, border: '1px solid rgba(225, 29, 72, 0.15)', fontSize: '0.85rem' }}>
+              📞 {lang === 'en' ? "National Emergency:" : "राष्ट्रीय आपातकाल:"} 112
+            </a>
+            <a href="tel:181" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'var(--accent-bg-light)', color: 'var(--accent-color)', padding: '0.65rem 1.25rem', borderRadius: '50px', textDecoration: 'none', fontWeight: 700, border: '1px solid rgba(37, 99, 235, 0.15)', fontSize: '0.85rem' }}>
+              🏛️ {lang === 'en' ? "CM Helpline:" : "मुख्यमंत्री हेल्पलाइन:"} 181 / 1076
+            </a>
+            <a href="tel:1930" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'var(--accent-bg-light)', color: 'var(--accent-color)', padding: '0.65rem 1.25rem', borderRadius: '50px', textDecoration: 'none', fontWeight: 700, border: '1px solid rgba(37, 99, 235, 0.15)', fontSize: '0.85rem' }}>
+              🛡️ {lang === 'en' ? "Cyber Crime:" : "साइबर अपराध:"} 1930
+            </a>
+            <a href="tel:1091" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'var(--danger-bg-light)', color: 'var(--danger-color)', padding: '0.65rem 1.25rem', borderRadius: '50px', textDecoration: 'none', fontWeight: 700, border: '1px solid rgba(225, 29, 72, 0.15)', fontSize: '0.85rem' }}>
+              👩 {lang === 'en' ? "Women Safety:" : "महिला सुरक्षा:"} 1091
+            </a>
           </div>
         </section>
 
