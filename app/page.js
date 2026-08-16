@@ -10,7 +10,6 @@ import EmptyState from '../components/EmptyState';
 import SOSModal from '../components/SOSModal';
 import FIRLetterModal from '../components/FIRLetterModal';
 import SituationCard from '../components/SituationCard';
-import WizardSection from '../components/WizardSection';
 import FaqSection from '../components/FaqSection';
 
 export default function Home() {
@@ -330,9 +329,6 @@ ____________________
             </div>
           </div>
         </section>
-
-        {/* Am I Detained Interactive Diagnostic Tool */}
-        <WizardSection t={t} lang={lang} />
 
         {/* Anchored Section for Rights Exploration */}
         <div id="explore-rights" style={{ scrollMarginTop: '120px' }}></div>
