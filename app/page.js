@@ -481,7 +481,7 @@ const data = {
         ],
         detailed_steps: [
           "सहमत न हों और रिश्वत न दें: रिश्वत देने से दृढ़ता से इनकार करें। याद रखें, भ्रष्टाचार निवारण अधिनियम की धारा 8 के तहत रिश्वत देना भी एक अपराध है, जब तक कि आपको मजबूर न किया गया हो और आप 7 दिनों के भीतर रिपोर्ट करते हैं।",
-          "चुपके से सबूत इकट्ठा करें: रिश्वत की मांग का ऑडियो या वीडियो रिकॉर्ड करने के लिए अपने फोन का उपयोग करें। यदि आप रिकॉर्ड नहीं कर सकते हैं, तो गवाह को साथ रखने का प्रयास करें। सटीक राशि और अधिकारी का विवरण नोट करें।",
+          "चुपके से सबूत इकट्ठा करें: रिश्वत की मांग का आदेश या वीडियो रिकॉर्ड करने के लिए अपने फोन का उपयोग करें। यदि आप रिकॉर्ड नहीं कर सकते हैं, तो गवाह को साथ रखने का प्रयास करें। सटीक राशि और अधिकारी का विवरण नोट करें।",
           "जाल (Trap) बिछाएं: यदि आप भ्रष्टाचार निरोधक ब्यूरो (ACB) को मांग की रिपोर्ट करते हैं, तो वे अक्सर भ्रष्ट अधिकारी को रंगे हाथों पकड़ने के लिए रासायनिक रूप से चिह्नित मुद्रा का उपयोग करके 'जाल' बिछाते हैं।",
           "ऑनलाइन रिपोर्ट करें: आप केंद्रीय सतर्कता आयोग (CVC) पोर्टल या अपने राज्य के भ्रष्टाचार निरोधक विभाग की वेबसाइट पर सीधे शिकायत दर्ज कर सकते हैं।"
         ],
@@ -492,7 +492,7 @@ const data = {
           }
         ],
         complaints: [
-          { step: "1", text: "रिश्वत न दें। अधिकारी का नाम, पद, पुलिस स्टेशन और सही मांग नोट करें।" },
+          { step: "1", text: "रिवत न दें। अधिकारी का नाम, पद, पुलिस स्टेशन और सही मांग नोट करें।" },
           { step: "2", text: "तुरंत भ्रष्टाचार निरोधक हेल्पलाइन (1064) पर कॉल करें या स्थानीय भ्रष्टाचार निरोधक ब्यूरो (ACB) कार्यालय से संपर्क करें।" },
           { step: "3", text: "कार्रवाई शुरू करने के लिए एसीबी अधिकारियों को ऑडियो/वीडियो रिकॉर्डिंग और अन्य सबूत प्रदान करें।" }
         ],
@@ -647,7 +647,8 @@ const Icons = {
   Languages: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m5 8 6 6"></path><path d="m4 14 6-6 2-3"></path><path d="M2 5h12"></path><path d="M7 2h1"></path><path d="m22 22-5-10-5 10"></path><path d="M14 18h6"></path></svg>,
   PhoneCall: () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path><path d="M14.05 2a9 9 0 0 1 7.95 7.95"></path><path d="M14.05 6A5 5 0 0 1 18 9.95"></path></svg>,
   X: () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>,
-  Download: () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+  Download: () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>,
+  Back: () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
 };
 
 const getIcon = (name) => {
@@ -882,7 +883,7 @@ ____________________
         {/* Workspace Grid */}
         <div className="workspace-grid">
           {/* Sidebar */}
-          <section className="sidebar-panel">
+          <section className={`sidebar-panel ${activeId ? 'hidden-mobile' : ''}`}>
             <h3 className="sidebar-title">{t.situations_heading}</h3>
             {filteredSituations.map(item => (
               <button 
@@ -897,7 +898,7 @@ ____________________
           </section>
 
           {/* Details */}
-          <section className="detail-panel">
+          <section className={`detail-panel ${!activeId ? 'hidden-mobile' : ''}`}>
             {!activeItem ? (
               <div className="placeholder-view">
                 <Icons.ShieldAlert />
@@ -907,9 +908,14 @@ ____________________
             ) : (
               <div>
                 <div className="detail-header">
-                  <div>
-                    <span className="category-tag">{activeItem.category}</span>
-                    <h2 className="detail-title">{activeItem.title}</h2>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                    <button className="btn icon-btn mobile-back-btn" onClick={() => setActiveId(null)} aria-label="Back">
+                      <Icons.Back />
+                    </button>
+                    <div>
+                      <span className="category-tag">{activeItem.category}</span>
+                      <h2 className="detail-title">{activeItem.title}</h2>
+                    </div>
                   </div>
                 </div>
 
@@ -1008,21 +1014,21 @@ ____________________
                     <p>{t.sos_rule_1_desc}</p>
                   </div>
                 </div>
-                <div class="sos-item">
+                <div className="sos-item">
                   <div className="sos-badge">2</div>
                   <div className="sos-details">
                     <h4>{t.sos_rule_2_title}</h4>
                     <p>{t.sos_rule_2_desc}</p>
                   </div>
                 </div>
-                <div class="sos-item">
+                <div className="sos-item">
                   <div className="sos-badge">3</div>
                   <div className="sos-details">
                     <h4>{t.sos_rule_3_title}</h4>
                     <p>{t.sos_rule_3_desc}</p>
                   </div>
                 </div>
-                <div class="sos-item">
+                <div className="sos-item">
                   <div className="sos-badge">4</div>
                   <div className="sos-details">
                     <h4>{t.sos_rule_4_title}</h4>

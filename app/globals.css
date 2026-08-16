@@ -120,6 +120,10 @@ body {
   color: var(--text-primary);
 }
 
+.mobile-back-btn {
+  display: none;
+}
+
 .btn:hover {
   background-color: var(--bg-main);
   border-color: var(--text-muted);
@@ -252,6 +256,16 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 768px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+  .mobile-back-btn {
+    display: inline-flex !important;
+  }
+}
+
 
 /* Sidebar List */
 .sidebar-panel {
